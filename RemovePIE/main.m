@@ -22,6 +22,7 @@ int main(int argc, const char * argv[]) {
         if(FatHeader->magic==FAT_CIGAM||FatHeader->magic==FAT_MAGIC){
             
             int numberOfFatArch=FatHeader->nfat_arch/0x1000000;
+            //Calculate Corrent Arch Number
             printf("Fat Binary Containing %x Architectures Detected.Fat Binary is Currently Unsupported",numberOfFatArch);
             //exit(-1);
             for(int i=0;i<numberOfFatArch;i++){
