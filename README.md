@@ -1,2 +1,7 @@
 # ASLR-Removal
-Not Finished,yet.
+Function Missing:
+
+* Correct Output CPUType&CPUSubType.
+
+* Combine The Slices Back Together
+
