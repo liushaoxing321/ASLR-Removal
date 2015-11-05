@@ -21,9 +21,10 @@ int main(int argc, const char * argv[]) {
         struct fat_header *FatHeader=(struct fat_header*)rawData;
         if(FatHeader->magic==FAT_CIGAM||FatHeader->magic==FAT_MAGIC){
             
-            printf("Fat Binary Detected.Fat Binary is Currently Unsupported");
+            int numberOfFatArch=FatHeader->nfat_arch/0x1000000;
+            printf("Fat Binary Containing %x Architectures Detected.Fat Binary is Currently Unsupported",numberOfFatArch);
             //exit(-1);
-            for(int i=0;i<FatHeader->nfat_arch;i++){
+            for(int i=0;i<numberOfFatArch;i++){
             NSFileHandle* NSFH=[NSFileHandle fileHandleForReadingAtPath:Path];
             [NSFH seekToFileOffset:sizeof(struct fat_header)+sizeof(struct fat_arch)];
                 struct fat_arch* FatArch=(struct fat_arch*)[[NSFH readDataOfLength:sizeof(struct fat_arch)] bytes];
