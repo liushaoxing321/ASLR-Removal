@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D87ADA81-CEF3-44CD-A58E-4853B64EBE0C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F2DFD765D6FA0734C191EB74EB0ED7B659917B62</key>
+		<string>https://github.com/Naville/ASLR-Removal.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RemovePIE.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F2DFD765D6FA0734C191EB74EB0ED7B659917B62</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Naville/ASLR-Removal.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F2DFD765D6FA0734C191EB74EB0ED7B659917B62</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F2DFD765D6FA0734C191EB74EB0ED7B659917B62</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RemovePIE</string>
+		</dict>
+	</array>
+</dict>
+</plist>
