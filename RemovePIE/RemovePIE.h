@@ -12,5 +12,5 @@
 #import <mach-o/fat.h>
 
 @interface RemovePIE : NSObject
-+(void)RemovePIEThin:(struct mach_header*)header Path:(NSString*)Path;
++(NSData*)RemovePIEThin:(NSData*)headerData Path:(NSString*)Path;
 @end

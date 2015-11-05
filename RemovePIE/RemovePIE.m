@@ -9,15 +9,17 @@
 #import "RemovePIE.h"
 
 @implementation RemovePIE
-+(void)RemovePIEThin:(struct mach_header*)header Path:(NSString*)Path{
-    printf("cputype:0x%x cpusubtype:0x%x Flags:0x%x",header->cputype,header->cpusubtype,header->flags);
++(NSData*)RemovePIEThin:(NSData*)headerData Path:(NSString*)Path{
+    printf("Current headerData Size:0x%lx\n",headerData.length);
+    char* rawData=(char*)[headerData bytes];
+    struct mach_header *header = (struct mach_header*)rawData;
+    printf("CPUTYPE:0%x CPUSUBTYPE:0%x",CFSwapInt32(header->cputype),CFSwapInt32(header->cpusubtype));
+
+    NSLog(@"Output Wrote To:%@",Path);
     header->flags=header->flags-MH_PIE;
-    char* Data=(char*)header;
-    NSData* dataout=[NSData dataWithBytes:Data length:sizeof(header)];
-    NSString* OutPath=[Path stringByAppendingString:@".NOPIE"];
-    [dataout writeToFile:OutPath atomically:YES];
+    NSData* OutData=[NSData dataWithBytes:header length:headerData.length];
+    [OutData writeToFile:Path atomically:YES];
     
-    
-    
+    return headerData;
 }
 @end
